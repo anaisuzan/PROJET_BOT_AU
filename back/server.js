@@ -13,7 +13,7 @@ app.use(cors("*"))
 //     res.json({move, action})
 //   })
 
-  app.post('/action', (req, res) => {
+  app.get('/action', (req, res) => {
     console.log(req.body)
     // Récupération des données du body
     const move = req.body?.move;
