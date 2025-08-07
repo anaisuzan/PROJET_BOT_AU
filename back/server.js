@@ -15,7 +15,7 @@ app.use(cors("*"))
   let move = "NONE";
   let action = "NONE";  
 
-  app.get('/action', (req, res) => {
+  app.post('/action', (req, res) => {
     console.log(req.body)
     
     // Récupération des données du body
@@ -23,6 +23,13 @@ app.use(cors("*"))
     action = req.body?.action;
     // Réponse
     res.json({ move, action });
+  });
+
+  app.get('/action', (req, res) => {
+    res.json({
+      "move" : move,
+      "action" : action
+    })
   });
 // export default app;
 app.listen(port, () => {
