@@ -1,0 +1,16 @@
+name: Mon Workflow
+on:
+  push:
+    branches:
+      - main
+
+  jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v2
+      - name: Installation des dépendances
+        run: npm install
+      - name: Exécution des tests
+        run: npm test

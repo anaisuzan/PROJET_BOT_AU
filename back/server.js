@@ -21,7 +21,7 @@ app.use(cors("*"))
     // Réponse
     res.json({ move, action });
   });
-
+// export default app;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
