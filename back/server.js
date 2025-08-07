@@ -12,12 +12,15 @@ app.use(cors("*"))
 // app.get('/action', (req, res) => {
 //     res.json({move, action})
 //   })
+  let move = "NONE";
+  let action = "NONE";  
 
   app.get('/action', (req, res) => {
     console.log(req.body)
+    
     // Récupération des données du body
-    const move = req.body?.move;
-    const action = req.body?.action;
+    move = req.body?.move;
+    action = req.body?.action;
     // Réponse
     res.json({ move, action });
   });
